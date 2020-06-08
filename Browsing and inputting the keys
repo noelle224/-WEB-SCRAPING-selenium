@@ -1,0 +1,23 @@
+2. GET THE GOOOGLE MAPS AND GIVE IN THE KEYS 
+
+
+browser = webdriver.Chrome()
+browser.get('https://www.google.com/maps/')
+
+browser.find_element(By.XPATH, '//*[@id="searchboxinput"]').send_keys(" 48.8566, 2.3522 ")
+browser.find_element(By.XPATH, '//*[@id="searchboxinput"]').send_keys(Keys.ENTER)
+time.sleep(5)
+browser.find_element(By.XPATH, '//*[@id="pane"]/div/div/div/div/div[5]/div[3]/div/button/img').click()
+browser.find_element(By.XPATH, '//*[@id="searchboxinput"]').send_keys(" Restaurants ")
+browser.find_element(By.XPATH, '//*[@id="searchboxinput"]').send_keys(Keys.ENTER)
+browser.find_element(By.ID, 'widget-zoom-out').click()
+
+
+
+print(browser.find_element(By.XPATH, '//*[@id="widget-scale-label"]').text)
+
+#browser.quit()
+
+browser.find_element(By.XPATH, '//*[@id="pane"]/div/div[3]/button').click()
+
+browser.find_element(By.ID, 'widget-zoom-out').click()
