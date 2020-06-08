@@ -1,0 +1,8 @@
+3. PRINT THE MAP SCREENSHOTS
+
+from PIL import Image
+browser.save_screenshot("image.png")
+im = Image.open('image.png')
+
+from IPython.display import Image
+Image(filename='image.png')
