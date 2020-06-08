@@ -1,0 +1,18 @@
+time.sleep(5)
+browser.find_element(By.XPATH, '//body/jsl/div/div/div/div/div/div/div/div/div/div[3]/div[1]/div[1]/div[1]').click()
+time.sleep(5)
+name=(browser.find_element(By.XPATH, '//html//body//jsl//div//div//div//div//div//div//div//div//div//div//h1').text)
+print(name)
+time.sleep(3)
+browser.find_element(By.XPATH, '//body/jsl/div/div/div/div/div/div/div/div[10]/div[1]/div[1]').click()
+time.sleep(3)
+import pyperclip as pc
+address=pc.paste()
+print(address)
+time.sleep(3)
+browser.find_element(By.XPATH, '//body/jsl/div/div/div/div/div/div/div/div[12]/div[1]/div[1]').click()
+time.sleep(3)
+import pyperclip as pc
+phone=pc.paste()
+print(phone)
+data.append([name,address,phone])
