@@ -1,0 +1,4 @@
+data=[]
+data.append([name,address,phone])
+df=pd.DataFrame(data,columns=['name','address','phone'])
+print(df)
